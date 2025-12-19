@@ -48,7 +48,7 @@ public class PlayerTank : SingletonClass<PlayerTank>
         leftBulletCount = 1;
         spawnPosition = new Vector3(-4, -12, 0);
         canControl = false;
-        leftLife = 1;
+        leftLife = 3;
     }
 
     private void Update()

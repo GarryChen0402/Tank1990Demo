@@ -47,6 +47,7 @@ public class GameManager : SingletonClass<GameManager>
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
         switch (gameState)
         {
             case GameState.Gaming:
@@ -113,7 +114,7 @@ public class GameManager : SingletonClass<GameManager>
 
     public void SwitchToWaiting()
     {
-        waitingImageText.text = $"Stage {currentLevel}";
+        waitingImageText.text = $"Stage {currentLevel + 1}";
         waitingImage.SetActive(true);
         gameState = GameState.Waiting;
         waitTimer = 0;

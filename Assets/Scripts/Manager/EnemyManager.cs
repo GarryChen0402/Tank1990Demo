@@ -109,6 +109,12 @@ public class EnemyManager : SingletonClass<EnemyManager>
         canSpawnEnemy = true;
         spawnTimer = 0;
         spawnedEnemyCount = 0;
+        if (isFreeze)
+        {
+            isFreeze = false;
+            freezeTimer = 0;
+            UnFreezeAllEnemy();
+        }
     }
 
     private void FreezeAllEnemy()
