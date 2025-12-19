@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 enum GameState
 {
@@ -74,8 +75,9 @@ public class GameManager : SingletonClass<GameManager>
     {
         if (Input.anyKeyDown)
         {
-            Debug.Log("Quit");
-            Application.Quit();
+            //Debug.Log("Quit");
+            //Application.Quit();
+            SceneManager.LoadScene("TitleScene");
         }
     }
 
@@ -94,8 +96,9 @@ public class GameManager : SingletonClass<GameManager>
     {
         if (Input.anyKeyDown)
         {
-            Debug.Log("Quit");
-            Application.Quit();
+            //Debug.Log("Quit");
+            SceneManager.LoadScene("TitleScene");
+            //Application.Quit();
         }
     }
 
@@ -123,7 +126,7 @@ public class GameManager : SingletonClass<GameManager>
     public void SwitchToWin()
     {
         gameState = GameState.Win;
-        waitingImageText.text = "All stage cleared, you win!!\n Congratulations.\n Press any key to exit.";
+        waitingImageText.text = "All stage cleared, you win!!\n Congratulations.\n Press any key to return.";
         waitingImage.SetActive(true);
     }
 

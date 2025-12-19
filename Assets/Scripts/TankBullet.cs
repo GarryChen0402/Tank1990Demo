@@ -59,7 +59,8 @@ public class TankBullet : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals(owner.tag))
         {
-            Broken();
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+            //Broken();
         }
         else if (collision.gameObject.tag.Equals("BrickWall")){
             collision.gameObject.GetComponent<BrickWall>().GetShot();

@@ -70,7 +70,7 @@ public class CommonEnemy : Enemy
     {
         string collisionTag = collision.gameObject.tag;
         //Debug.Log(collisionTag);
-        if (collisionTag.Equals("Item"))
+        if (collisionTag.Equals("Item") || collisionTag.Equals("Enemy"))
         {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
             //Debug.Log(collisionTag);

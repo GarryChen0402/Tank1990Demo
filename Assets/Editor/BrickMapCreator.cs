@@ -3,7 +3,7 @@ using UnityEditor;
 
 
 [InitializeOnLoad]
-public class BrickMapCreator 
+public static class BrickMapCreator 
 {
     private const float SnapStep = 0.5f;
 
